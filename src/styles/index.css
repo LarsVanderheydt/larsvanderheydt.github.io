@@ -17,6 +17,16 @@
   --gradient-bg: radial-gradient(ellipse 100% 50% at 50% 0%, #1a1a2e 0%, #0a0a0f 60%);
 }
 
+:root[data-theme='imperium-classics'] {
+  --color-bg: #080a10;
+  --color-surface: #121828;
+  --color-primary: #c8a030;
+  --color-accent: #9a2820;
+  --color-text: #f0ecd8;
+  --color-text-muted: #8a7a50;
+  --gradient-bg: radial-gradient(ellipse 120% 60% at 50% 0%, #2a1e06 0%, #0e1020 45%, #080a10 100%);
+}
+
 :root[data-theme='dune-imperium-uprising'] {
   --color-bg: #08060a;
   --color-surface: #18120a;
