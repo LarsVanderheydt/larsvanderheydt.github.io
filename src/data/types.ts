@@ -12,8 +12,10 @@ export type SetupItem = {
 
 export type PlaythroughStep = {
   id: string
-  /** Short label shown in the checklist, e.g. "Play #1" */
+  /** Contextual title, e.g. "Spider-Man vs Rhino" */
   label: string
+  /** What to focus on or learn during this specific play */
+  hint?: string
   /** What needs to be set up for this play */
   setup: SetupItem[]
 }
