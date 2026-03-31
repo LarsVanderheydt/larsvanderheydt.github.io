@@ -14,10 +14,9 @@ export function PlaythroughItem({ step, completed, onToggle }: Props) {
         aria-checked={completed}
         aria-label={`${step.label} — ${completed ? 'completed, click to undo' : 'mark as complete'}`}
         onClick={() => onToggle(!completed)}
-        className="w-full rounded-xl bg-[var(--color-surface)] p-4 text-left transition-all active:scale-[0.99] active:opacity-80"
-        style={{
-          boxShadow: completed ? 'inset 3px 0 0 var(--color-primary)' : 'inset 3px 0 0 transparent',
-        }}
+        className={`w-full border-l-[3px] bg-[var(--color-surface)] p-4 text-left transition-all active:brightness-125 ${
+          completed ? 'border-[var(--color-primary)]' : 'border-transparent'
+        }`}
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
