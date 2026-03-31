@@ -166,6 +166,7 @@ function makeSteps(
       label: `${hero} vs ${v.villain}`,
       hint: HINTS[hero][v.villain][hintKey],
       setup: [
+        { label: 'Mode', value: 'Solo' },
         { label: 'Modular Set', value: v[modularKey] },
         { label: 'Difficulty', value: difficulty },
       ],
@@ -182,21 +183,21 @@ export const marvelChampions: GameDefinition = {
       id: 'core-standard',
       title: 'Core Set — Standard',
       description:
-        'Complete the full core set experience at Standard difficulty. All five heroes take on all three villains.',
+        'Complete the full core set solo at Standard difficulty. One hero per session — work through all five heroes against all three villains.',
       steps: makeSteps('Standard', 'modularStandard', 'standard'),
     },
     {
       id: 'core-expert',
       title: 'Core Set — Expert',
       description:
-        'Replay the core set with villains on their Expert side. Includes the Expert Encounter Set for tougher treacheries.',
+        'Replay the full core set solo with villains on their Expert side. Includes the Expert Encounter Set for tougher treacheries.',
       steps: makeSteps('Expert', 'modularStandard', 'expert'),
     },
     {
       id: 'core-heroic',
       title: 'Core Set — Heroic',
       description:
-        'Extreme difficulty. Harder modular sets push each villain to its limit. One additional encounter card per player phase.',
+        'Extreme difficulty solo. Harder modular sets push each villain to its limit. One additional encounter card per villain phase.',
       steps: makeSteps('Heroic', 'modularHeroic', 'heroic'),
     },
   ],
