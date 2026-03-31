@@ -18,7 +18,7 @@ export function GameCard({ game }: Props) {
       <Link
         to="/$gameId"
         params={{ gameId: game.id }}
-        className="flex flex-col overflow-hidden rounded-2xl bg-[var(--color-surface)] transition-opacity active:opacity-70"
+        className="flex flex-col bg-[var(--color-surface)] transition-all active:brightness-125"
       >
         {/* Coloured header strip */}
         <div
