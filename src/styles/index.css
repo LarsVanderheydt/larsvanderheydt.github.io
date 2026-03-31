@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+/* ── Game Themes ─────────────────────────────────────────────────────────────
+   Applied via data-theme on <html>. Each game declares its own color palette
+   as CSS custom properties. Components reference these via Tailwind arbitrary
+   values: bg-[var(--color-bg)], text-[var(--color-primary)], etc.
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-primary: #ffffff;
+  --color-accent: #ffffff;
+  --color-text: #f0f0f0;
+  --color-text-muted: #888888;
+}
+
+:root[data-theme='marvel-champions'] {
+  --color-bg: #0d0d1a;
+  --color-surface: #16213e;
+  --color-primary: #e23636;
+  --color-accent: #f0c040;
+  --color-text: #f0f0f5;
+  --color-text-muted: #8888aa;
+}
