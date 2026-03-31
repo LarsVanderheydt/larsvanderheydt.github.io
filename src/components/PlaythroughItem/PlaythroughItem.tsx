@@ -8,50 +8,71 @@ type Props = {
 
 export function PlaythroughItem({ step, completed, onToggle }: Props) {
   return (
-    <li className="flex items-start gap-3 rounded-xl bg-[var(--color-surface)] p-4">
+    <li>
       <button
         role="checkbox"
         aria-checked={completed}
-        aria-label={`Mark ${step.label} as ${completed ? 'incomplete' : 'complete'}`}
+        aria-label={`${step.label} — ${completed ? 'completed, click to undo' : 'mark as complete'}`}
         onClick={() => onToggle(!completed)}
-        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-[var(--color-primary)] transition-colors"
+        className="w-full rounded-xl bg-[var(--color-surface)] p-4 text-left transition-all active:scale-[0.99] active:opacity-80"
         style={{
-          backgroundColor: completed ? 'var(--color-primary)' : 'transparent',
+          boxShadow: completed ? 'inset 3px 0 0 var(--color-primary)' : 'inset 3px 0 0 transparent',
         }}
       >
-        {completed && (
-          <svg
-            viewBox="0 0 12 12"
-            fill="none"
-            className="h-3 w-3"
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1 min-w-0">
+            <p
+              className={`text-sm font-semibold transition-colors ${
+                completed
+                  ? 'text-[var(--color-text-muted)] line-through'
+                  : 'text-[var(--color-text)]'
+              }`}
+            >
+              {step.label}
+            </p>
+
+            <dl className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
+              {step.setup.map((item) => (
+                <div key={item.label} className="flex items-center gap-1 text-xs">
+                  <dt className="text-[var(--color-text-muted)]">{item.label}</dt>
+                  <dd className="font-medium text-[var(--color-accent)]">{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+
+            {step.hint && (
+              <p className="mt-2 text-xs leading-relaxed text-[var(--color-text-muted)] italic">
+                {step.hint}
+              </p>
+            )}
+          </div>
+
+          <div
+            className="mt-0.5 shrink-0 transition-opacity"
+            style={{ opacity: completed ? 1 : 0 }}
             aria-hidden="true"
           >
-            <path
-              d="M2 6l3 3 5-5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        )}
+            <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4">
+              <circle
+                cx="8"
+                cy="8"
+                r="7"
+                fill="var(--color-primary)"
+                fillOpacity="0.15"
+                stroke="var(--color-primary)"
+                strokeWidth="1.5"
+              />
+              <path
+                d="M5 8l2.5 2.5 4-4"
+                stroke="var(--color-primary)"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
       </button>
-
-      <div className="flex-1">
-        <p
-          className={`text-sm font-semibold ${completed ? 'text-[var(--color-text-muted)] line-through' : 'text-[var(--color-text)]'}`}
-        >
-          {step.label}
-        </p>
-        <dl className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
-          {step.setup.map((item) => (
-            <div key={item.label} className="flex items-center gap-1 text-xs">
-              <dt className="text-[var(--color-text-muted)]">{item.label}</dt>
-              <dd className="font-medium text-[var(--color-accent)]">{item.value}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
     </li>
   )
 }

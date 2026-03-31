@@ -15,7 +15,7 @@ function GamePage() {
   const { game } = Route.useLoaderData()
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-lg flex-col gap-6 bg-[var(--color-bg)] p-6">
+    <main className="mx-auto flex min-h-dvh w-full max-w-[1920px] flex-col gap-6 p-6 sm:p-10">
       <header className="flex items-center gap-3">
         <Link
           to="/"
