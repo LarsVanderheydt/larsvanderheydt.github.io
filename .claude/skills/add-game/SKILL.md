@@ -1,8 +1,9 @@
 # Add Game — Board Game Achievement Tracker
 
-Adds a new board game to the achievement tracker app. Researches
-official and community achievements, picks a colour palette, and
-wires everything up end-to-end.
+Adds a new board game to the achievement tracker app. This tracker is
+**solo-play only** — all achievements and steps must be designed around
+the solo mode of the game. Researches the solo ruleset, solo-specific
+challenges, picks a colour palette, and wires everything up end-to-end.
 
 ## Usage
 
@@ -14,23 +15,48 @@ wires everything up end-to-end.
 
 ## Step 1: Research the game
 
-Use WebSearch and WebFetch to gather:
+**BoardGameGeek is the primary source.** All research starts there. Only fall back to external searches if BGG does not have what you need.
 
-1. **Official achievements / campaign / legacy modes**
-   - Search: `"<Game Name>" official campaign playthrough OR achievement guide site:boardgamegeek.com`
-   - Search: `"<Game Name>" rulebook achievements OR legacy OR campaign`
-   - Look for official app companions if the game has one
+### 1a. Find the BGG game page
 
-2. **Community challenges and achievement lists**
-   - Search: `"<Game Name>" achievement OR challenge list site:boardgamegeek.com`
-   - Search: `"<Game Name>" fan achievement OR challenge OR checklist`
-   - Check BGG forums and files section for any achievement PDFs/threads
+Search BGG for the game: `boardgamegeek.com/search?q=<Game+Name>&type=boardgame`
 
-3. **Visual identity for the colour palette**
-   - Search: `"<Game Name>" board game box art color palette`
-   - Note the dominant colours: primary (hero colour), accent (highlight), background (dark base), surface (card colour)
+From the game page, collect:
+- BGG game ID (from the URL: `boardgamegeek.com/boardgame/<ID>/...`)
+- Designer, publisher, year
+- Player count, solo support confirmation
 
-Compile all findings before writing any code. Ask for clarification if the game name is ambiguous.
+### 1b. Read the rulebook from BGG Files
+
+Go to the BGG Files section: `boardgamegeek.com/boardgame/<ID>/files`
+
+Look for the official English rulebook PDF. Fetch and read it. Focus entirely on:
+- **Solo mode rules** — setup differences, turn structure, end condition
+- **Solo scoring system** — how the final score is calculated or rated (e.g. star/sun/tier table)
+- **Solo-specific difficulty options** — board sides, difficulty cards, challenge variants
+- **Any official solo campaigns or scenario packs** listed in the rulebook
+
+Only if the rulebook is not on BGG Files, search elsewhere:
+- Publisher's resources page
+- `"<Game Name>" rulebook PDF filetype:pdf`
+
+### 1c. Check BGG for solo challenges and achievements
+
+Search BGG forums and files for community solo content:
+- `boardgamegeek.com/boardgame/<ID>/forums` — search for "solo", "challenge", "achievement"
+- `boardgamegeek.com/boardgame/<ID>/files` — look for solo scenario PDFs, challenge sheets
+
+Also search: `"<Game Name>" solo challenge OR achievement OR campaign site:boardgamegeek.com`
+
+### 1d. Visual identity for the colour palette
+
+Search: `"<Game Name>" board game box art`
+
+Note the dominant colours: primary landscape/theme colour, accent/highlight, background (dark base), surface (card colour).
+
+---
+
+**Solo focus:** If the game has no solo mode, stop and inform the user — this tracker is solo-only. Do not design multiplayer achievements.
 
 ---
 
@@ -55,11 +81,12 @@ type Achievement = {
 ```
 
 Rules:
-- `label` must be contextual, not generic ("Play #1") — e.g. "Spider-Man vs Rhino", "Chapter 3: The Betrayal", "Legendary Difficulty Run"
-- `hint` should advise what to focus on or learn from this specific play
-- `setup` should list only the fields relevant to this game (Scenario, Hero, Villain, Chapter, Difficulty, Module, etc.)
-- Create separate `Achievement` entries for distinct modes (campaign, challenge mode, legendary run, etc.)
-- Steps should be ordered as the recommended play sequence
+- **Solo only** — every step must be playable alone. No multiplayer steps.
+- `label` must be contextual, not generic ("Play #1") — e.g. "Heroic Difficulty Run", "Chapter 3: The Betrayal", "5 Suns Target"
+- `hint` should advise what to focus on or learn during this specific solo play
+- `setup` should list only the fields relevant to this game's solo setup (Difficulty, Board Side, Scenario, Module, Target Score, etc.)
+- Create separate `Achievement` entries for distinct solo modes (solo campaign, difficulty tiers, score targets, challenge variants, etc.)
+- Steps should be ordered as the recommended solo progression
 
 ---
 
