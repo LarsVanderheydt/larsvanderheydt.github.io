@@ -17,6 +17,46 @@
   --gradient-bg: radial-gradient(ellipse 100% 50% at 50% 0%, #1a1a2e 0%, #0a0a0f 60%);
 }
 
+:root[data-theme='dune-imperium-uprising'] {
+  --color-bg: #08060a;
+  --color-surface: #18120a;
+  --color-primary: #c89030;
+  --color-accent: #a03428;
+  --color-text: #f2eed8;
+  --color-text-muted: #8a7a50;
+  --gradient-bg: radial-gradient(ellipse 120% 60% at 50% 0%, #2e1e06 0%, #100c06 45%, #08060a 100%);
+}
+
+:root[data-theme='spirit-island'] {
+  --color-bg: #060c08;
+  --color-surface: #0e1c10;
+  --color-primary: #c87828;
+  --color-accent: #4aaa78;
+  --color-text: #f0f2ee;
+  --color-text-muted: #7a9878;
+  --gradient-bg: radial-gradient(ellipse 120% 60% at 50% 0%, #2e1c08 0%, #0a160b 45%, #060c08 100%);
+}
+
+:root[data-theme='arkham-horror-lcg'] {
+  --color-bg: #060810;
+  --color-surface: #0e1220;
+  --color-primary: #4aaa88;
+  --color-accent: #c8962a;
+  --color-text: #e8e8f0;
+  --color-text-muted: #6a7090;
+  --gradient-bg: radial-gradient(ellipse 120% 60% at 50% 0%, #0d2a1e 0%, #0a0e1a 45%, #060810 100%);
+}
+
+:root[data-theme='harmonies'] {
+  --color-bg: #060c07;
+  --color-surface: #0c1a0e;
+  --color-primary: #4a9e5c;
+  --color-accent: #c87c28;
+  --color-text: #eef5f0;
+  --color-text-muted: #6a9472;
+  --gradient-bg: radial-gradient(ellipse 120% 60% at 50% 0%, #1a3a1e 0%, #0a160b 45%, #060c07 100%);
+}
+
 :root[data-theme='marvel-champions'] {
   --color-bg: #080810;
   --color-surface: #12182e;
