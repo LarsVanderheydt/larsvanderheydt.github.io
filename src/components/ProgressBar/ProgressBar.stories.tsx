@@ -15,7 +15,7 @@ export const Empty: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const bar = canvas.getByRole('progressbar')
-    expect(bar).toHaveAttribute('aria-valuenow', '0')
+    await expect(bar).toHaveAttribute('aria-valuenow', '0')
   },
 }
 
@@ -24,8 +24,8 @@ export const HalfDone: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const bar = canvas.getByRole('progressbar')
-    expect(bar).toHaveAttribute('aria-valuenow', '44')
-    expect(canvas.getByText('44%')).toBeInTheDocument()
+    await expect(bar).toHaveAttribute('aria-valuenow', '44')
+    await expect(canvas.getByText('44%')).toBeInTheDocument()
   },
 }
 
@@ -34,7 +34,7 @@ export const Complete: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const bar = canvas.getByRole('progressbar')
-    expect(bar).toHaveAttribute('aria-valuenow', '100')
-    expect(canvas.getByText('100%')).toBeInTheDocument()
+    await expect(bar).toHaveAttribute('aria-valuenow', '100')
+    await expect(canvas.getByText('100%')).toBeInTheDocument()
   },
 }
