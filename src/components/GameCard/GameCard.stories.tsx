@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { expect, within } from '@storybook/test'
+import { expect, within } from 'storybook/test'
 import { GameCard } from './GameCard'
 import type { GameDefinition } from '@/data/types'
 
@@ -25,6 +25,7 @@ const meta: Meta<typeof GameCard> = {
   parameters: { layout: 'padded' },
   args: { game },
 }
+
 export default meta
 
 type Story = StoryObj<typeof GameCard>
@@ -32,7 +33,7 @@ type Story = StoryObj<typeof GameCard>
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    expect(canvas.getByText('Marvel Champions')).toBeInTheDocument()
-    expect(canvas.getByRole('progressbar')).toBeInTheDocument()
+    await expect(canvas.getByText('Marvel Champions')).toBeInTheDocument()
+    await expect(canvas.getByRole('progressbar')).toBeInTheDocument()
   },
 }
