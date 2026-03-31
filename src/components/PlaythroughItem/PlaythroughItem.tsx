@@ -1,4 +1,5 @@
 import type { PlaythroughStep } from '@/data/types'
+import {CheckIcon} from "@/components/PlaythroughItem/CheckIcon.tsx";
 
 type Props = {
   step: PlaythroughStep
@@ -14,11 +15,10 @@ export function PlaythroughItem({ step, completed, onToggle }: Props) {
         aria-checked={completed}
         aria-label={`${step.label} — ${completed ? 'completed, click to undo' : 'mark as complete'}`}
         onClick={() => onToggle(!completed)}
-        className={`w-full border-l-[3px] bg-[var(--color-surface)] p-4 text-left transition-all active:brightness-125 ${
+        className={`flex items-start justify-between gap-4 w-full border-l-[3px] bg-[var(--color-surface)] p-4 text-left transition-all active:brightness-125 ${
           completed ? 'border-[var(--color-primary)]' : 'border-transparent'
         }`}
       >
-        <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
             <p
               className={`text-sm font-semibold transition-colors ${
@@ -51,26 +51,8 @@ export function PlaythroughItem({ step, completed, onToggle }: Props) {
             style={{ opacity: completed ? 1 : 0 }}
             aria-hidden="true"
           >
-            <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4">
-              <circle
-                cx="8"
-                cy="8"
-                r="7"
-                fill="var(--color-primary)"
-                fillOpacity="0.15"
-                stroke="var(--color-primary)"
-                strokeWidth="1.5"
-              />
-              <path
-                d="M5 8l2.5 2.5 4-4"
-                stroke="var(--color-primary)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              <CheckIcon />
           </div>
-        </div>
       </button>
     </li>
   )
