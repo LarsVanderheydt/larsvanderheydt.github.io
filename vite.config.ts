@@ -13,7 +13,10 @@ const dirname =
 
 export default defineConfig({
   plugins: [
-    tanstackRouter({ target: 'react', autoCodeSplitting: true }),
+    // TanStack Router plugin must not run during Storybook builds — it tries
+    // to scan routes and write routeTree.gen.ts which breaks Storybook's Vite pipeline.
+    process.env.STORYBOOK !== 'true' &&
+      tanstackRouter({ target: 'react', autoCodeSplitting: true }),
     react(),
     tailwindcss(),
   ],
