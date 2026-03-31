@@ -13,16 +13,27 @@ export function GameCard({ game }: Props) {
   const completedSteps = completions.length
 
   return (
-    <Link
-      to="/$gameId"
-      params={{ gameId: game.id }}
-      className="flex flex-col gap-3 rounded-2xl bg-[var(--color-surface)] p-5 transition-opacity active:opacity-70"
-    >
-      <h2 className="text-base font-bold text-[var(--color-text)]">{game.name}</h2>
-      <ProgressBar completed={completedSteps} total={totalSteps} />
-      <p className="text-xs text-[var(--color-text-muted)]">
-        {completedSteps} / {totalSteps} plays completed
-      </p>
-    </Link>
+    // data-theme makes CSS vars resolve to this game's palette inside the card
+    <div data-theme={game.theme.id}>
+      <Link
+        to="/$gameId"
+        params={{ gameId: game.id }}
+        className="flex flex-col overflow-hidden rounded-2xl bg-[var(--color-surface)] transition-opacity active:opacity-70"
+      >
+        {/* Coloured header strip */}
+        <div
+          className="h-1.5 w-full"
+          style={{ background: 'var(--color-primary)' }}
+        />
+
+        <div className="flex flex-col gap-3 p-5">
+          <h2 className="text-base font-bold text-[var(--color-text)]">{game.name}</h2>
+          <ProgressBar completed={completedSteps} total={totalSteps} />
+          <p className="text-xs text-[var(--color-text-muted)]">
+            {completedSteps} / {totalSteps} plays completed
+          </p>
+        </div>
+      </Link>
+    </div>
   )
 }

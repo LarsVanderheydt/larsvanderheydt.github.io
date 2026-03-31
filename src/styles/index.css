@@ -8,13 +8,13 @@
    ────────────────────────────────────────────────────────────────────────── */
 
 :root {
-  --color-bg: #0f0f0f;
-  --color-surface: #1a1a1a;
-  --color-primary: #ffffff;
-  --color-accent: #ffffff;
+  --color-bg: #0a0a0f;
+  --color-surface: #14141e;
+  --color-primary: #a0a0c0;
+  --color-accent: #c0c0e0;
   --color-text: #f0f0f0;
-  --color-text-muted: #888888;
-  --gradient-bg: var(--color-bg);
+  --color-text-muted: #666680;
+  --gradient-bg: radial-gradient(ellipse 100% 50% at 50% 0%, #1a1a2e 0%, #0a0a0f 60%);
 }
 
 :root[data-theme='marvel-champions'] {
