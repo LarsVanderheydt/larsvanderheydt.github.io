@@ -157,7 +157,7 @@ export const cv: Cv = {
     roles: [
         {
             company: 'Tripletex',
-            location: 'Oslo',
+            location: 'Oslo, Norway',
             title: 'Tech Lead, Platform Frontend',
             period: '2026–now',
             summary:
@@ -170,7 +170,7 @@ export const cv: Cv = {
         },
         {
             company: 'Tripletex',
-            location: 'Oslo',
+            location: 'Oslo, Norway',
             title: 'Tech Lead, Bank',
             period: '2023–2026',
             summary:
@@ -186,7 +186,7 @@ export const cv: Cv = {
         },
         {
             company: 'Tripletex',
-            location: 'Oslo',
+            location: 'Oslo, Norway',
             title: 'Developer, Bank',
             period: '2022–2023',
             summary: 'React and Java, replacing legacy JSP with maintainable, tested code.',
@@ -194,7 +194,7 @@ export const cv: Cv = {
         },
         {
             company: 'Bouwsoft',
-            location: 'Meetkerke, BE',
+            location: 'Meetkerke, Belgium',
             title: 'Web App Developer',
             period: '2019–2022',
             summary: 'Features and maintenance in an Ionic Angular app.',
@@ -202,7 +202,7 @@ export const cv: Cv = {
         },
         {
             company: 'D’M&S',
-            location: 'Bruges, BE',
+            location: 'Bruges, Belgium',
             title: 'Front-End Developer',
             period: '2018–2019',
             summary: 'Drupal 8 theming for client websites.',
@@ -210,7 +210,7 @@ export const cv: Cv = {
         },
         {
             company: 'E-Sign',
-            location: 'Ghent, BE',
+            location: 'Ghent, Belgium',
             title: 'Trainee',
             period: '2018',
             summary: 'Laravel; turning designs into code.',

@@ -15,7 +15,7 @@ export function ExperienceSection() {
                                     {r.title} <span className="experience-list__company">· {r.company}</span>
                                 </>
                             }
-                            meta={r.period}
+                            meta={`${r.period} · ${r.location}`}
                             summary={r.summary}
                         >
                             {r.details.length > 0 && (
