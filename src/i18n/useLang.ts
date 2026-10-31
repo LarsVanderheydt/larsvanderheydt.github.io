@@ -29,7 +29,7 @@ const writeParam = (lang: Lang): void => {
 };
 
 export const useLang = (): { lang: Lang; toggle: () => void } => {
-    const [lang, setLang] = useState<Lang>(() => resolveLang(readParam(), readStored(), navigator.languages));
+    const [lang, setLang] = useState<Lang>(() => resolveLang(readParam(), readStored()));
 
     useEffect(() => {
         document.documentElement.lang = lang;
