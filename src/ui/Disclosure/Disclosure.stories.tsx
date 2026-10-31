@@ -8,7 +8,7 @@ const meta: Meta<typeof Disclosure> = {
     component: Disclosure,
     args: {
         title: 'One frontend monorepo',
-        meta: '2025 — 2026',
+        meta: '2025–2026',
         summary: 'Every micro-frontend moved into one monorepo.',
     },
 };

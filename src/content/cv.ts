@@ -36,8 +36,8 @@ export const cv: Cv = {
     name: 'Lars Vanderheydt',
     role: 'Frontend Platform Engineer',
     location: 'Oslo, Norway',
-    pitch: 'I make large frontend codebases faster, safer and easier to work in — for developers and the AI tools they use.',
-    intro: 'Eight years building for the web, tech lead since 2023 — first for the bank team, now in a platform team where every member is one. I set the frontend baseline at Tripletex: shared config, pipelines and tests.',
+    pitch: 'I make large frontend codebases faster, safer and easier to work in, for developers and the AI tools they use.',
+    intro: 'Eight years building for the web, tech lead since 2023. First for the bank team, now in a platform team where every member is one. I set the frontend baseline at Tripletex: shared config, pipelines and tests.',
     email: 'lars.vanderheydt@hotmail.com',
     links: [
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lars-vanderheydt/' },
@@ -51,14 +51,14 @@ export const cv: Cv = {
     work: [
         {
             title: 'One frontend monorepo',
-            period: '2025 — 2026',
+            period: '2025–2026',
             summary:
-                'Proposed, got approval for and helped deliver the move of every micro-frontend into one monorepo — ahead of a deadline that was pulled forward.',
+                'Proposed, got approval for and helped deliver the move of every micro-frontend into one monorepo, ahead of a deadline that was pulled forward.',
             details: [
                 'Pitched the problem to the CTO panel: separate pipelines per team, duplicated config, drifting versions and the same fix made in every repo. Approved.',
                 'Scoped it down on purpose: no big bang, one team at a time, short-term wins first.',
                 '25 apps and 14 packages migrated with their git history; nine of the migrations were mine, the largest at 1,400+ files.',
-                'Deadline moved forward a full quarter by leadership — and met.',
+                'Leadership moved the deadline forward a full quarter, and we met it.',
             ],
             tags: ['Monorepo', 'pnpm', 'Turborepo', 'Architecture'],
         },
@@ -79,7 +79,7 @@ export const cv: Cv = {
             title: 'End-to-end suite twice as fast',
             period: '2026',
             summary:
-                'Took the main app’s Playwright suite from slow and flaky to fast and boring — without deleting tests.',
+                'Took the main app’s Playwright suite from slow and flaky to fast and boring, without deleting tests.',
             details: [
                 'Median run time on main 6.6 → 3.6 minutes.',
                 'Skipped tests 36 → 9; the rest fixed and switched back on.',
@@ -90,12 +90,12 @@ export const cv: Cv = {
         },
         {
             title: 'An AI engineering crew',
-            period: '2026 — now',
+            period: '2026–now',
             summary:
                 'A personal Claude Code setup that drafts dependency-update reviews and flaky-test fixes from their traces. I review, decide and merge.',
             details: [
                 'Separate agents for planning, implementation and testing, held to the same lint, type and test rules as my own code.',
-                'Starts from evidence — the Playwright trace, the changelog, the actual usage — not from a guess.',
+                'Starts from evidence (the Playwright trace, the changelog, the actual usage), not from a guess.',
                 'Merged end-to-end fixes went from about 20 a month to 60 in three weeks.',
                 'Every run leaves a retrospective that improves the next one.',
             ],
@@ -103,7 +103,7 @@ export const cv: Cv = {
         },
         {
             title: 'Shared tooling, then and now',
-            period: '2024 — 2026',
+            period: '2024–2026',
             summary:
                 'One config library every micro-frontend could extend, later succeeded by the monorepo’s config packages.',
             details: [
@@ -115,19 +115,19 @@ export const cv: Cv = {
         },
         {
             title: 'Deterministic bank testing',
-            period: '2024 — 2025',
+            period: '2024–2025',
             summary:
                 'Mocked every bank API the product talks to, so payments can be tested end to end on any machine and in CI.',
             details: [
                 'Mocks per bank, payment provider, FX payments and reconciliation, in one Docker image.',
-                'Special payment references pick the outcome — booked, rejected — so tests never flake on a sandbox.',
+                'Special payment references pick the outcome, booked or rejected, so tests never flake on a sandbox.',
                 'The main app’s end-to-end suite runs against any micro-frontend branch, full stack in Docker.',
             ],
             tags: ['Mocking', 'Docker', 'E2E'],
         },
         {
             title: 'Teaching and hiring',
-            period: '2024 — 2025',
+            period: '2024–2025',
             summary:
                 'Co-created and ran a two-day frontend course for developers across offices, and interviewed for the platform team.',
             details: [
@@ -159,11 +159,11 @@ export const cv: Cv = {
             company: 'Tripletex',
             location: 'Oslo',
             title: 'Tech Lead, Platform Frontend',
-            period: '2026 — now',
+            period: '2026–now',
             summary:
                 'A team of tech leads with shared ownership of the frontend baseline: the main app and a 29-app, 15-package monorepo.',
             details: [
-                'Dependencies and security updates, lint and type rules, and a stable, continuously deployed pipeline — no sprints.',
+                'Dependencies and security updates, lint and type rules, and a stable, continuously deployed pipeline. No sprints.',
                 'Speed up the frontend part of the main app’s pipeline and remove frontend legacy.',
                 'Support domain teams with the shared UI library.',
             ],
@@ -172,7 +172,7 @@ export const cv: Cv = {
             company: 'Tripletex',
             location: 'Oslo',
             title: 'Tech Lead, Bank',
-            period: '2023 — 2026',
+            period: '2023–2026',
             summary:
                 'The bank team’s tech lead. Led the move from legacy JSP to React and Java, built for long-term maintenance.',
             details: [
@@ -188,7 +188,7 @@ export const cv: Cv = {
             company: 'Tripletex',
             location: 'Oslo',
             title: 'Developer, Bank',
-            period: '2022 — 2023',
+            period: '2022–2023',
             summary: 'React and Java, replacing legacy JSP with maintainable, tested code.',
             details: [],
         },
@@ -196,7 +196,7 @@ export const cv: Cv = {
             company: 'Bouwsoft',
             location: 'Meetkerke, BE',
             title: 'Web App Developer',
-            period: '2019 — 2022',
+            period: '2019–2022',
             summary: 'Features and maintenance in an Ionic Angular app.',
             details: [],
         },
@@ -204,7 +204,7 @@ export const cv: Cv = {
             company: 'D’M&S',
             location: 'Bruges, BE',
             title: 'Front-End Developer',
-            period: '2018 — 2019',
+            period: '2018–2019',
             summary: 'Drupal 8 theming for client websites.',
             details: [],
         },
@@ -226,6 +226,6 @@ export const cv: Cv = {
         { group: 'AI-assisted engineering', items: ['Claude Code', 'Agents & skills', 'Hooks', 'MCP'] },
         { group: 'Also', items: ['Java & Spring Boot', 'Docker'] },
     ],
-    education: [{ school: 'Howest', degree: 'Bachelor, Digital Design & Development (Devine)', period: '2015 — 2018' }],
-    languages: ['Dutch — native', 'English — fluent', 'Norwegian — working'],
+    education: [{ school: 'Howest', degree: 'Bachelor, Digital Design & Development (Devine)', period: '2015–2018' }],
+    languages: ['Dutch (native)', 'English (fluent)', 'Norwegian (working)'],
 };

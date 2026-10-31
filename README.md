@@ -18,7 +18,7 @@ All copy lives in [`src/content/cv.ts`](src/content/cv.ts), typed by the `Cv` ty
 
 - New piece of work: add an object to `work` (`title`, `period`, `summary`, `details`, `tags`). Order is display order.
 - New role: add to the top of `roles`. Leave `details` empty for a role that should not expand.
-- Periods are `YYYY`, `YYYY — YYYY` or `YYYY — now`; `src/content/cv.test.ts` enforces this and unique titles.
+- Periods are `YYYY`, `YYYY–YYYY` or `YYYY–now`; `src/content/cv.test.ts` enforces this and unique titles.
 
 The site is public: no colleague names, internal links or customer data.
 
