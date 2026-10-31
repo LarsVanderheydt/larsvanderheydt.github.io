@@ -63,7 +63,7 @@ export const nl: Cv = {
                 'Workflows per team vervangen door één gedeelde PR- en productiepipeline. Een nieuwe app toevoegen is nu een registratie, geen project.',
             details: [
                 'Elke PR: lint, stylelint, Storybook-build, unit- en browsertests, coverage, een branch-deploy en de getagde end-to-end tests.',
-                'Productie deployt alleen wat een merge veranderde en meldt dat automatisch aan change management.',
+                'Productie deployt alleen wat een merge veranderde en meldt dat automatisch aan Slack.',
                 'Zeven productieworkflows per app geschrapt; deploymeldingen zeggen nu precies wat er live ging.',
                 'Eén PR-label start een testomgeving met de build van die PR.',
             ],
