@@ -19,8 +19,17 @@ const writeStored = (lang: Lang): void => {
     }
 };
 
+const readParam = (): string | null => new URLSearchParams(location.search).get(langStorageKey);
+
+// Keeps the address bar a shareable link to what the visitor is reading.
+const writeParam = (lang: Lang): void => {
+    const url = new URL(location.href);
+    url.searchParams.set(langStorageKey, lang);
+    history.replaceState(history.state, '', url);
+};
+
 export const useLang = (): { lang: Lang; toggle: () => void } => {
-    const [lang, setLang] = useState<Lang>(() => resolveLang(readStored(), navigator.languages));
+    const [lang, setLang] = useState<Lang>(() => resolveLang(readParam(), readStored(), navigator.languages));
 
     useEffect(() => {
         document.documentElement.lang = lang;
@@ -29,6 +38,7 @@ export const useLang = (): { lang: Lang; toggle: () => void } => {
     const toggle = (): void => {
         const next = otherLang(lang);
         writeStored(next);
+        writeParam(next);
         setLang(next);
     };
 

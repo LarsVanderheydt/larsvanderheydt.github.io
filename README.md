@@ -34,4 +34,4 @@ src/
   ui/<Name>/ one component per folder: .tsx, .css, .stories.tsx (play function = test)
 ```
 
-Theme follows the system setting until the visitor uses the toggle; the choice is kept in `localStorage`. Language works the same way: Dutch for a Dutch browser locale, English otherwise, until the visitor picks one.
+Theme follows the system setting until the visitor uses the toggle; the choice is kept in `localStorage`. Language works the same way: a `?lang=en` or `?lang=nl` link wins (without overwriting the visitor's saved choice), then the saved choice, then Dutch for a Dutch browser locale, English otherwise. The toggle updates `?lang=` in the address bar, so it can be copied and shared.
