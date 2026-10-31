@@ -36,8 +36,8 @@ export const cv: Cv = {
     name: 'Lars Vanderheydt',
     role: 'Frontend Platform Engineer',
     location: 'Oslo, Norway',
-    pitch: 'I make large frontend codebases faster, safer and easier to work in — for developers, and for the AI agents working beside them.',
-    intro: 'Eight years of building for the web, three as a tech lead. Today I set the frontend baseline at Tripletex — shared config, pipelines and tests — and make sure AI tooling follows the same rules as the people using it.',
+    pitch: 'I make large frontend codebases faster, safer and easier to work in — for developers and the AI tools they use.',
+    intro: 'Eight years building for the web, tech lead since 2023 — first for the bank team, now in a platform team where every member is one. I set the frontend baseline at Tripletex: shared config, pipelines and tests.',
     email: 'lars.vanderheydt@hotmail.com',
     links: [
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lars-vanderheydt/' },
@@ -46,7 +46,7 @@ export const cv: Cv = {
     focus: [
         { title: 'Frontend platform', body: 'Monorepos, shared config and one pipeline every team can rely on.' },
         { title: 'Quality at speed', body: 'Fast, deterministic tests and CI that catches problems before review.' },
-        { title: 'AI with due diligence', body: 'Agents that ship inside lint, types, tests and review — never around them.' },
+        { title: 'AI with due diligence', body: 'Using AI to move faster while staying in control of every change.' },
     ],
     work: [
         {
@@ -88,9 +88,9 @@ export const cv: Cv = {
         {
             title: 'An AI engineering crew',
             period: '2026 — now',
-            summary: 'A personal multi-agent setup on Claude Code that reviews dependency updates and fixes flaky tests from their traces. I review and merge every PR.',
+            summary: 'A personal Claude Code setup that drafts dependency-update reviews and flaky-test fixes from their traces. I review, decide and merge.',
             details: [
-                'Specialist agents for planning, implementation and adversarial testing, each bound to the project’s own rules.',
+                'Separate agents for planning, implementation and testing, held to the same lint, type and test rules as my own code.',
                 'Starts from evidence — the Playwright trace, the changelog, the actual usage — not from a guess.',
                 'Merged end-to-end fixes went from about 20 a month to 60 in three weeks.',
                 'Every run leaves a retrospective that improves the next one.',
@@ -131,19 +131,19 @@ export const cv: Cv = {
         },
     ],
     ai: {
-        intro: 'I use Claude Code every day — not to “put AI on it”, but to explore ideas quickly and ship work that is fast, secure and stable. The judgement stays mine.',
+        intro: 'I use Claude Code every day to explore ideas faster and take on repetitive work, so my time goes to the decisions. What it produces is my work: I review it, and I am responsible and accountable for it.',
         practices: [
             {
-                title: 'Same rules as people',
-                body: 'Agents work inside lint, types, tests and project instructions they cannot skip.',
+                title: 'I review my own work',
+                body: 'Every change gets the same review whether I typed it or not. My name is on it.',
             },
             {
                 title: 'Evidence before a fix',
-                body: 'Traces, logs and queries first; I check the agent’s diagnosis against them.',
+                body: 'Traces, logs and data first. A suggested diagnosis is checked against them, never taken on trust.',
             },
             {
-                title: 'I own the merge',
-                body: 'Agents open the PR. Review, approval and responsibility stay with me.',
+                title: 'A tool, not a replacement',
+                body: 'AI speeds up the work. The design, the trade-offs and the judgement stay with the developer.',
             },
         ],
     },
@@ -151,9 +151,9 @@ export const cv: Cv = {
         {
             company: 'Tripletex',
             location: 'Oslo',
-            title: 'Developer, Platform Frontend',
+            title: 'Tech Lead, Platform Frontend',
             period: '2026 — now',
-            summary: 'Own the frontend baseline for the main app and a 29-app, 15-package monorepo.',
+            summary: 'A team of tech leads with shared ownership of the frontend baseline: the main app and a 29-app, 15-package monorepo.',
             details: [
                 'Dependencies and security updates, lint and type rules, and a stable, continuously deployed pipeline — no sprints.',
                 'Speed up the frontend part of the main app’s pipeline and remove frontend legacy.',
@@ -165,9 +165,9 @@ export const cv: Cv = {
             location: 'Oslo',
             title: 'Tech Lead, Bank',
             period: '2023 — 2026',
-            summary: 'Led the bank domain’s move from legacy JSP to React and Java, built for long-term maintenance.',
+            summary: 'The bank team’s tech lead. Led the move from legacy JSP to React and Java, built for long-term maintenance.',
             details: [
-                'Built the PSD2 integration with ZTL and moved automatic payments onto it.',
+                'Added features to the PSD2 integration with ZTL, including moving automatic payments onto it.',
                 'Maintained and moved forward the file-based Autopay system.',
                 'Rebuilt bank reconciliation on the design system; customer satisfaction rose from 5.3 to 6.3 out of 7.',
                 'Set up the banking micro-frontend from scratch: build, deploy, linting, Storybook, Playwright and error handling.',

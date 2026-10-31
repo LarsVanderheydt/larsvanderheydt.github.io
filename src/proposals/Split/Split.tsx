@@ -79,18 +79,6 @@ export function Split({ theme }: { theme: Theme }) {
                             ))}
                         </ul>
                     </nav>
-                    <ul className="sp-contact">
-                        <li>
-                            <a className="sp-btn" href={`mailto:${cv.email}`}>
-                                Email me
-                            </a>
-                        </li>
-                        {cv.links.map((l) => (
-                            <li key={l.label}>
-                                <a href={l.href}>{l.label}</a>
-                            </li>
-                        ))}
-                    </ul>
                 </aside>
 
                 <main id="main" className="sp-main">
@@ -191,6 +179,22 @@ export function Split({ theme }: { theme: Theme }) {
                     </section>
                 </main>
             </div>
+
+            <footer className="sp-wrap sp-footer">
+                <p>
+                    {cv.name} · {cv.location}
+                </p>
+                <ul>
+                    <li>
+                        <a href={`mailto:${cv.email}`}>{cv.email}</a>
+                    </li>
+                    {cv.links.map((l) => (
+                        <li key={l.label}>
+                            <a href={l.href}>{l.label}</a>
+                        </li>
+                    ))}
+                </ul>
+            </footer>
         </div>
     );
 }
