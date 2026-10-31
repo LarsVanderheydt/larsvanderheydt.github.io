@@ -1,22 +1,40 @@
-import { ProposalPicker } from './proposals/ProposalPicker/ProposalPicker';
-import { Split } from './proposals/Split/Split';
-import type { Theme } from './proposals/Split/Split';
+import { useTheme } from './theme/useTheme';
+import { AiSection } from './ui/AiSection/AiSection';
+import { ExperienceSection } from './ui/ExperienceSection/ExperienceSection';
+import { Footer } from './ui/Footer/Footer';
+import { Hero } from './ui/Hero/Hero';
+import { SideNav } from './ui/SideNav/SideNav';
+import { SkillsSection } from './ui/SkillsSection/SkillsSection';
+import { ThemeToggle } from './ui/ThemeToggle/ThemeToggle';
+import { WorkSection } from './ui/WorkSection/WorkSection';
+import './App.css';
 
-const options: { id: Theme; label: string }[] = [
-    { id: 'night', label: 'Night' },
-    { id: 'day', label: 'Day' },
+const sections = [
+    { id: 'work', label: 'Work' },
+    { id: 'ai', label: 'AI' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'skills', label: 'Skills' },
 ];
 
-const systemTheme = (): Theme => (window.matchMedia('(prefers-color-scheme: light)').matches ? 'day' : 'night');
-
 export function App() {
-    const param = new URLSearchParams(window.location.search).get('p');
-    const theme = options.find((o) => o.id === param)?.id ?? systemTheme();
+    const { theme, toggle } = useTheme();
 
     return (
         <>
-            <Split theme={theme} />
-            <ProposalPicker current={theme} options={options} />
+            <a className="skip-link" href="#main">
+                Skip to content
+            </a>
+            <Hero theme={theme} actions={<ThemeToggle theme={theme} onToggle={toggle} />} />
+            <div className="layout page">
+                <SideNav sections={sections} />
+                <main id="main" className="layout__main">
+                    <WorkSection />
+                    <AiSection />
+                    <ExperienceSection />
+                    <SkillsSection />
+                </main>
+            </div>
+            <Footer />
         </>
     );
 }

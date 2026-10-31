@@ -1,0 +1,34 @@
+.ai__intro {
+    max-width: 40rem;
+    font-size: 1.125rem;
+}
+
+.ai__practices {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    margin-top: 2rem;
+    counter-reset: practice;
+}
+
+.ai__practices li {
+    padding-top: 1rem;
+    border-top: 2px solid var(--accent);
+    counter-increment: practice;
+}
+
+.ai__practices h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.ai__practices h3::before {
+    content: counter(practice, decimal-leading-zero) '  ';
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.ai__practices p {
+    margin-top: 0.25rem;
+    color: var(--muted);
+}

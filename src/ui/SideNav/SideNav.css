@@ -1,0 +1,42 @@
+.side-nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    display: grid;
+    gap: 2rem;
+}
+
+.side-nav__intro {
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
+.side-nav__links {
+    display: grid;
+    gap: 0.25rem;
+    border-left: 1px solid var(--line);
+}
+
+.side-nav__links a {
+    display: block;
+    margin-left: -1px;
+    padding: 0.25rem 1rem;
+    border-left: 1px solid transparent;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.side-nav__links a:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+@media (max-width: 56rem) {
+    .side-nav {
+        position: static;
+    }
+
+    .side-nav nav {
+        display: none;
+    }
+}

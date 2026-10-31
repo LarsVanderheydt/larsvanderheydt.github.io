@@ -1,0 +1,9 @@
+.experience-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.experience-list__company {
+    color: var(--muted);
+    font-weight: 400;
+}

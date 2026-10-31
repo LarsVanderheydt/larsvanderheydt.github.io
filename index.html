@@ -4,13 +4,44 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lars Vanderheydt — Frontend Platform Engineer</title>
-        <meta name="description" content="Frontend platform engineer in Oslo. Monorepos, shared tooling, test pipelines and teams that ship with confidence." />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+        <meta
+            name="description"
+            content="Frontend platform engineer in Oslo. Monorepos, shared tooling, fast test pipelines and AI-assisted engineering with due diligence."
         />
+        <link rel="canonical" href="https://larsvanderheydt.github.io/" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#0a0d14" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Lars Vanderheydt — Frontend Platform Engineer" />
+        <meta
+            property="og:description"
+            content="Making large frontend codebases faster, safer and easier to work in."
+        />
+        <meta property="og:url" content="https://larsvanderheydt.github.io/" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Lars Vanderheydt",
+                "jobTitle": "Frontend Platform Engineer",
+                "address": { "@type": "PostalAddress", "addressLocality": "Oslo", "addressCountry": "NO" },
+                "url": "https://larsvanderheydt.github.io/",
+                "sameAs": ["https://www.linkedin.com/in/lars-vanderheydt/", "https://github.com/LarsVanderheydt"]
+            }
+        </script>
+        <!-- Sets the theme before first paint; keep in sync with resolveTheme in src/theme/theme.ts. -->
+        <script>
+            (() => {
+                let stored = null;
+                try {
+                    stored = localStorage.getItem('theme');
+                } catch {}
+                const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.dataset.theme =
+                    stored === 'light' || stored === 'dark' ? stored : dark ? 'dark' : 'light';
+            })();
+        </script>
     </head>
     <body>
         <div id="root"></div>

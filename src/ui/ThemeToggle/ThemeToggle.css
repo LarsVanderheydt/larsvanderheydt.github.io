@@ -1,0 +1,21 @@
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+    color: var(--text);
+    font: 500 0.8125rem/1 var(--font-sans);
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+}
+
+.theme-toggle[aria-pressed='true'] span {
+    color: var(--accent);
+}

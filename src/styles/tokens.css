@@ -1,0 +1,30 @@
+:root {
+    --font-sans: 'Inter Variable', system-ui, sans-serif;
+    --font-serif: 'Fraunces Variable', Georgia, serif;
+    --radius: 0.875rem;
+    --page: min(100% - 2.5rem, 72rem);
+}
+
+:root[data-theme='dark'] {
+    color-scheme: dark;
+    --bg: #0a0d14;
+    --surface: #121826;
+    --line: #222a3b;
+    --text: #e7ecf5;
+    --muted: #9aa6bd;
+    --accent: #5eead4;
+    --tag: rgb(94 234 212 / 10%);
+    --hero-fallback: radial-gradient(80% 60% at 50% 0%, #1d3a5f, #0a0d14);
+}
+
+:root[data-theme='light'] {
+    color-scheme: light;
+    --bg: #faf7f1;
+    --surface: #fff;
+    --line: #e2dccf;
+    --text: #1d1c1a;
+    --muted: #5c5850;
+    --accent: #2f45b5;
+    --tag: rgb(47 69 181 / 8%);
+    --hero-fallback: radial-gradient(80% 60% at 50% 0%, #dfe7f5, #faf7f1);
+}
