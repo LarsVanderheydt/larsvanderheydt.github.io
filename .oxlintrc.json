@@ -1,0 +1,27 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["react", "typescript", "unicorn", "vitest", "jsx-a11y", "import"],
+    "categories": {
+        "correctness": "error",
+        "suspicious": "warn"
+    },
+    "rules": {
+        "typescript/no-explicit-any": "error",
+        "typescript/consistent-type-definitions": ["error", "type"],
+        "typescript/consistent-type-imports": "error",
+        "react/exhaustive-deps": "error",
+        "react/rules-of-hooks": "error",
+        "react/jsx-key": "error",
+        "react/react-in-jsx-scope": "off",
+        "vitest/expect-expect": "error",
+        "vitest/no-focused-tests": "error",
+        "vitest/no-disabled-tests": "error",
+        "import/no-unassigned-import": [
+            "error",
+            {
+                "allow": ["**/*.css", "@fontsource-variable/*"]
+            }
+        ]
+    },
+    "ignorePatterns": ["dist", "storybook-static"]
+}

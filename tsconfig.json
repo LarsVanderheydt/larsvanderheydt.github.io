@@ -10,8 +10,9 @@
         "noUnusedParameters": true,
         "verbatimModuleSyntax": true,
         "skipLibCheck": true,
+        "types": ["vite/client"],
         "noEmit": true,
-        "types": ["vite/client"]
+        "allowJs": true
     },
-    "include": ["src", "vite.config.ts"]
+    "include": ["src", ".storybook", "vite.config.ts", "eslint.config.js"]
 }
