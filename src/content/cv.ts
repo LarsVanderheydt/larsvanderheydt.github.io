@@ -32,6 +32,7 @@ export type Cv = {
         education: string;
         languages: string;
         darkMode: string;
+        lightMode: string;
     };
     sections: Record<SectionId, { nav: string; title: string }>;
     name: string;

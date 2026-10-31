@@ -11,6 +11,7 @@ export const nl: Cv = {
         education: 'Opleiding',
         languages: 'Talen',
         darkMode: 'Donkere modus',
+        lightMode: 'Lichte modus',
     },
     sections: {
         work: { nav: 'Werk', title: 'Geselecteerd werk' },
