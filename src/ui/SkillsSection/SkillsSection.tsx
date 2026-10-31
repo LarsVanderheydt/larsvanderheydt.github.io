@@ -1,10 +1,12 @@
-import { cv } from '../../content/cv';
+import { useCv } from '../../i18n/CvContext';
 import { Section } from '../Section/Section';
 import './SkillsSection.css';
 
 export function SkillsSection() {
+    const cv = useCv();
+
     return (
-        <Section id="skills" title="Skills">
+        <Section id="skills" title={cv.sections.skills.title}>
             <dl className="skills">
                 {cv.skills.map((s) => (
                     <div key={s.group}>
@@ -20,14 +22,14 @@ export function SkillsSection() {
                 ))}
                 {cv.education.map((e) => (
                     <div key={e.school}>
-                        <dt>Education</dt>
+                        <dt>{cv.labels.education}</dt>
                         <dd>
                             {e.degree}, {e.school}
                         </dd>
                     </div>
                 ))}
                 <div>
-                    <dt>Languages</dt>
+                    <dt>{cv.labels.languages}</dt>
                     <dd>{cv.languages.join(' · ')}</dd>
                 </div>
             </dl>

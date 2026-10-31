@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { expect } from 'storybook/test';
 
-import { cv } from '../../content/cv';
+import { cvs } from '../../content/cv';
 import { SkillsSection } from './SkillsSection';
+
+const cv = cvs.en;
 
 const meta: Meta<typeof SkillsSection> = { title: 'Sections/Skills', component: SkillsSection };
 export default meta;

@@ -24,6 +24,7 @@
     inset: 1.5rem 0 auto;
     display: flex;
     justify-content: flex-end;
+    gap: 0.5rem;
 }
 
 .hero__inner {

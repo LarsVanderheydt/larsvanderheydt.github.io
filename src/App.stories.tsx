@@ -18,5 +18,12 @@ export const Default: StoryObj<typeof App> = {
         const before = document.documentElement.dataset.theme;
         await userEvent.click(canvas.getByRole('button', { name: 'Dark mode' }));
         await expect(document.documentElement.dataset.theme).not.toBe(before);
+
+        await userEvent.click(canvas.getByRole('button', { name: 'Nederlands' }));
+        await expect(canvas.getByRole('heading', { name: 'Geselecteerd werk' })).toBeVisible();
+        await expect(document.documentElement.lang).toBe('nl');
+
+        await userEvent.click(canvas.getByRole('button', { name: 'English' }));
+        await expect(canvas.getByRole('heading', { name: 'Selected work' })).toBeVisible();
     },
 };

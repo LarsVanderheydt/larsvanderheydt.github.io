@@ -1,17 +1,17 @@
-import { cv } from '../../content/cv';
+import { useCv } from '../../i18n/CvContext';
 import './SideNav.css';
 
-type Props = { sections: { id: string; label: string }[] };
+export function SideNav() {
+    const cv = useCv();
 
-export function SideNav({ sections }: Props) {
     return (
-        <aside className="side-nav" aria-label="Introduction">
+        <aside className="side-nav" aria-label={cv.labels.introduction}>
             <p className="side-nav__intro">{cv.intro}</p>
-            <nav aria-label="Sections" data-print="hide">
+            <nav aria-label={cv.labels.sections} data-print="hide">
                 <ul className="side-nav__links">
-                    {sections.map((s) => (
-                        <li key={s.id}>
-                            <a href={`#${s.id}`}>{s.label}</a>
+                    {Object.entries(cv.sections).map(([id, s]) => (
+                        <li key={id}>
+                            <a href={`#${id}`}>{s.nav}</a>
                         </li>
                     ))}
                 </ul>

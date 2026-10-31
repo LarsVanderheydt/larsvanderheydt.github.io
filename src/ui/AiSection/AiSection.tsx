@@ -1,10 +1,12 @@
-import { cv } from '../../content/cv';
+import { useCv } from '../../i18n/CvContext';
 import { Section } from '../Section/Section';
 import './AiSection.css';
 
 export function AiSection() {
+    const cv = useCv();
+
     return (
-        <Section id="ai" title="How I work with AI">
+        <Section id="ai" title={cv.sections.ai.title}>
             <p className="ai__intro">{cv.ai.intro}</p>
             <ol className="ai__practices">
                 {cv.ai.practices.map((p) => (

@@ -1,11 +1,13 @@
-import { cv } from '../../content/cv';
+import { useCv } from '../../i18n/CvContext';
 import { Disclosure } from '../Disclosure/Disclosure';
 import { Section } from '../Section/Section';
 import './ExperienceSection.css';
 
 export function ExperienceSection() {
+    const cv = useCv();
+
     return (
-        <Section id="experience" title="Experience">
+        <Section id="experience" title={cv.sections.experience.title}>
             <ol className="experience-list">
                 {cv.roles.map((r) => (
                     <li key={r.title + r.period}>

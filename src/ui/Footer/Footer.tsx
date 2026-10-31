@@ -1,7 +1,9 @@
-import { cv } from '../../content/cv';
+import { useCv } from '../../i18n/CvContext';
 import './Footer.css';
 
 export function Footer() {
+    const cv = useCv();
+
     return (
         <footer className="footer page">
             <p>

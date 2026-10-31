@@ -6,12 +6,6 @@ import { SideNav } from './SideNav';
 const meta: Meta<typeof SideNav> = {
     title: 'UI/SideNav',
     component: SideNav,
-    args: {
-        sections: [
-            { id: 'work', label: 'Work' },
-            { id: 'skills', label: 'Skills' },
-        ],
-    },
 };
 export default meta;
 
