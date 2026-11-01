@@ -14,16 +14,16 @@ export const nl: Cv = {
         lightMode: 'Lichte modus',
     },
     sections: {
-        work: { nav: 'Werk', title: 'Geselecteerd werk' },
+        work: { nav: 'Realisaties', title: 'Realisaties' },
+        experience: { nav: 'Werkervaring', title: 'Werkervaring' },
         ai: { nav: 'AI', title: 'Hoe ik met AI werk' },
-        experience: { nav: 'Ervaring', title: 'Ervaring' },
         skills: { nav: 'Vaardigheden', title: 'Vaardigheden' },
     },
     name: 'Lars Vanderheydt',
     role: 'Frontend Platform Engineer',
     location: 'Oslo, Noorwegen',
-    pitch: 'Ik maak grote frontend-codebases sneller, veiliger en prettiger om in te werken, voor developers en de AI-tools die ze gebruiken.',
-    intro: 'Acht jaar bouwen voor het web, tech lead sinds 2023. Eerst voor het bankteam, nu in een platformteam waar iedereen tech lead is. Bij Tripletex leg ik de basis voor de frontend: gedeelde configuratie, pipelines en tests.',
+    pitch: 'Ik maak grote frontend-codebases veiliger en prettiger om in te werken, zodat productteams sneller opleveren, met minder verrassingen.',
+    intro: 'Acht jaar bouwen voor het web, de laatste vier bij Tripletex, waar ik in 2023 van developer tech lead werd. Eerst voor het bankteam, nu in een platformteam waar iedereen tech lead is. Daar leg ik de basis voor de frontend: gedeelde configuratie, pipelines en tests.',
     email: 'lars.vanderheydt@hotmail.com',
     links: [
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lars-vanderheydt/' },
@@ -46,16 +46,18 @@ export const nl: Cv = {
     work: [
         {
             title: 'Eén frontend-monorepo',
-            period: '2025–2026',
+            period: '2024–2026',
             summary:
                 'De overstap van elke micro-frontend naar één monorepo voorgesteld, goedgekeurd gekregen en mee opgeleverd, vóór een deadline die werd vervroegd.',
             details: [
                 'Het probleem voorgelegd aan het CTO-panel: aparte pipelines per team, dubbele configuratie, uiteenlopende versies en dezelfde fix in elke repo. Goedgekeurd.',
                 'Bewust klein gehouden: geen big bang, team per team, eerst de snelle winsten.',
                 '25 apps en 14 packages gemigreerd met hun git-geschiedenis; negen migraties deed ik zelf, de grootste met meer dan 1.400 bestanden.',
-                'De leiding vervroegde de deadline met een volledig kwartaal, en we haalden hem.',
+                'Het management vervroegde de deadline met een volledig kwartaal, en we haalden hem.',
+                'Daarvoor: één gedeelde configuratiebibliotheek voor TypeScript, Vite, Vitest, ESLint en Playwright waarop elke micro-frontend voortbouwde, in 11 releases met versienummer.',
+                'Daarna: packages voor ESLint, Prettier, TypeScript, Storybook en Stylelint, gebruikt door elke app, met wekelijks gereviewde dependency-updates.',
             ],
-            tags: ['Monorepo', 'pnpm', 'Turborepo', 'Architectuur'],
+            tags: ['Monorepo', 'pnpm', 'Turborepo', 'Tooling'],
         },
         {
             title: 'Eén pipeline voor elke app',
@@ -91,22 +93,10 @@ export const nl: Cv = {
             details: [
                 'Aparte agents voor planning, implementatie en testen, gehouden aan dezelfde lint-, type- en testregels als mijn eigen code.',
                 'Vertrekt van bewijs (de Playwright-trace, de changelog, het echte gebruik), niet van een gok.',
-                'Gemergde end-to-end fixes gingen van ongeveer 20 per maand naar 60 in drie weken.',
+                'Gemergde end-to-end test-PR’s gingen van ongeveer 20 per maand naar 63 in oktober.',
                 'Elke run laat een retrospectieve achter die de volgende beter maakt.',
             ],
             tags: ['Claude Code', 'Agents', 'Automatisering'],
-        },
-        {
-            title: 'Gedeelde tooling, toen en nu',
-            period: '2024–2026',
-            summary:
-                'Eén configuratiebibliotheek waarop elke micro-frontend kon voortbouwen, later opgevolgd door de configuratiepackages van de monorepo.',
-            details: [
-                'Gedeelde configuratie voor TypeScript, Vite, Vitest, ESLint en Playwright, in 11 releases met versienummer.',
-                'In de monorepo: packages voor ESLint, Prettier, TypeScript, Storybook en Stylelint, gebruikt door elke app.',
-                'Automatische dependency-updates wekelijks gereviewd, zodat versies nooit meer uit elkaar groeien.',
-            ],
-            tags: ['Tooling', 'Standaarden'],
         },
         {
             title: 'Deterministisch testen van bankkoppelingen',
@@ -114,7 +104,7 @@ export const nl: Cv = {
             summary:
                 'Elke bank-API waarmee het product praat gemockt, zodat betalingen end-to-end getest kunnen worden op elke machine en in CI.',
             details: [
-                'Mocks per bank, betaalprovider, valutabetalingen en afstemming, in één Docker-image.',
+                'Mocks per bank, betaalprovider, betalingen in vreemde munt en bankreconciliatie, in één Docker-image.',
                 'Speciale betalingsreferenties bepalen de uitkomst, geboekt of geweigerd, zodat tests nooit falen door een sandbox.',
                 'De end-to-end suite van de hoofdapp draait tegen elke micro-frontend-branch, met de volledige stack in Docker.',
             ],
@@ -156,7 +146,7 @@ export const nl: Cv = {
             title: 'Tech Lead, Platform Frontend',
             period: '2026–nu',
             summary:
-                'Een team van tech leads met gedeeld eigenaarschap over de basis van de frontend: de hoofdapp en een monorepo met 29 apps en 15 packages.',
+                'Tripletex (Visma-groep) is een Noors cloudboekhoudplatform met meer dan 150.000 klanten. Een team van tech leads met gedeeld eigenaarschap over de basis van de frontend: de hoofdapp en een monorepo die intussen gegroeid is tot 29 apps en 15 packages.',
             details: [
                 'Dependency- en security-updates, lint- en typeregels, en een stabiele, continu gedeployde pipeline. Geen sprints.',
                 'Het frontendgedeelte van de pipeline van de hoofdapp versnellen en frontend-legacy opruimen.',
@@ -173,7 +163,7 @@ export const nl: Cv = {
             details: [
                 'Features toegevoegd aan de PSD2-integratie met ZTL, waaronder het overzetten van automatische betalingen.',
                 'Het bestandsgebaseerde Autopay-systeem onderhouden en verder ontwikkeld.',
-                'Bankafstemming herbouwd op het design system; de klanttevredenheid steeg van 5,3 naar 6,3 op 7.',
+                'Bankreconciliatie herbouwd op het design system.',
                 'De bank-micro-frontend van nul opgezet: build, deploy, linting, Storybook, Playwright en foutafhandeling.',
                 'Inspanning en impact zichtbaar gemaakt, zodat product kon beslissen over technische prioriteiten.',
                 'AI in het team geïntroduceerd, met duidelijke afspraken.',
@@ -203,14 +193,6 @@ export const nl: Cv = {
             summary: 'Drupal 8-theming voor websites van klanten.',
             details: [],
         },
-        {
-            company: 'E-Sign',
-            location: 'Gent, België',
-            title: 'Stagiair',
-            period: '2018',
-            summary: 'Laravel; ontwerpen omzetten in code.',
-            details: [],
-        },
     ],
     skills: [
         { group: 'Kern', items: ['TypeScript', 'React', 'HTML & CSS', 'Toegankelijkheid'] },
@@ -221,6 +203,12 @@ export const nl: Cv = {
         { group: 'AI-ondersteunde engineering', items: ['Claude Code', 'Agents & skills', 'Hooks', 'MCP'] },
         { group: 'Ook', items: ['Java & Spring Boot', 'Docker'] },
     ],
-    education: [{ school: 'Howest', degree: 'Bachelor Digital Design & Development (Devine)', period: '2015–2018' }],
-    languages: ['Nederlands (moedertaal)', 'Engels (vloeiend)', 'Noors (werkkennis)'],
+    education: [
+        {
+            school: 'Howest',
+            degree: 'Professionele bachelor Digital Design & Development (Devine)',
+            period: '2015–2018',
+        },
+    ],
+    languages: ['Nederlands (moedertaal)', 'Engels (vloeiend)', 'Noors (goede kennis)'],
 };

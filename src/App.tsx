@@ -36,8 +36,8 @@ export function App() {
                 <SideNav />
                 <main id="main" className="layout__main">
                     <WorkSection />
-                    <AiSection />
                     <ExperienceSection />
+                    <AiSection />
                     <SkillsSection />
                 </main>
             </div>

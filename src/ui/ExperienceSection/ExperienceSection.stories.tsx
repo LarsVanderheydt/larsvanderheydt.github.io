@@ -14,6 +14,6 @@ export const Default: StoryObj<typeof ExperienceSection> = {
         const expandable = cv.roles.filter((r) => r.details.length > 0);
         await expect(canvas.getAllByRole('group')).toHaveLength(expandable.length);
         await expect(canvas.getByText(cv.roles[cv.roles.length - 1].summary)).toBeVisible();
-        await expect(canvas.getByText('2018 · Ghent, Belgium')).toBeVisible();
+        await expect(canvas.getByText('2018–2019 · Bruges, Belgium')).toBeVisible();
     },
 };

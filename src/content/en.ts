@@ -15,15 +15,15 @@ export const en: Cv = {
     },
     sections: {
         work: { nav: 'Work', title: 'Selected work' },
-        ai: { nav: 'AI', title: 'How I work with AI' },
         experience: { nav: 'Experience', title: 'Experience' },
+        ai: { nav: 'AI', title: 'How I work with AI' },
         skills: { nav: 'Skills', title: 'Skills' },
     },
     name: 'Lars Vanderheydt',
     role: 'Frontend Platform Engineer',
     location: 'Oslo, Norway',
-    pitch: 'I make large frontend codebases faster, safer and easier to work in, for developers and the AI tools they use.',
-    intro: 'Eight years building for the web, tech lead since 2023. First for the bank team, now in a platform team where every member is one. I set the frontend baseline at Tripletex: shared config, pipelines and tests.',
+    pitch: 'I make large frontend codebases safer and easier to work in, so product teams ship faster with fewer surprises.',
+    intro: 'Eight years building for the web, the last four at Tripletex, where I went from developer to tech lead in 2023. First for the bank team, now in a platform team where every member is one. I set the frontend baseline there: shared config, pipelines and tests.',
     email: 'lars.vanderheydt@hotmail.com',
     links: [
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lars-vanderheydt/' },
@@ -37,7 +37,7 @@ export const en: Cv = {
     work: [
         {
             title: 'One frontend monorepo',
-            period: '2025–2026',
+            period: '2024–2026',
             summary:
                 'Proposed, got approval for and helped deliver the move of every micro-frontend into one monorepo, ahead of a deadline that was pulled forward.',
             details: [
@@ -45,8 +45,10 @@ export const en: Cv = {
                 'Scoped it down on purpose: no big bang, one team at a time, short-term wins first.',
                 '25 apps and 14 packages migrated with their git history; nine of the migrations were mine, the largest at 1,400+ files.',
                 'Leadership moved the deadline forward a full quarter, and we met it.',
+                'Before it: one shared TypeScript, Vite, Vitest, ESLint and Playwright config library every micro-frontend extended, 11 versioned releases.',
+                'After it: ESLint, Prettier, TypeScript, Storybook and Stylelint packages adopted by every app, with dependency updates reviewed weekly.',
             ],
-            tags: ['Monorepo', 'pnpm', 'Turborepo', 'Architecture'],
+            tags: ['Monorepo', 'pnpm', 'Turborepo', 'Tooling'],
         },
         {
             title: 'One pipeline for every app',
@@ -55,7 +57,7 @@ export const en: Cv = {
                 'Replaced per-team workflows with a shared PR and production pipeline. Adding a new app is now a registration, not a project.',
             details: [
                 'Every PR: lint, stylelint, Storybook build, unit and browser tests, coverage, a branch deploy and the tagged end-to-end tests.',
-                'Production deploys only what a merge changed and reports it to change management automatically.',
+                'Production deploys only what a merge changed and reports it to Slack automatically.',
                 'Seven per-app production workflows deleted; deploy notifications now say exactly what shipped.',
                 'One PR label spins up a test instance running that PR’s build.',
             ],
@@ -82,22 +84,10 @@ export const en: Cv = {
             details: [
                 'Separate agents for planning, implementation and testing, held to the same lint, type and test rules as my own code.',
                 'Starts from evidence (the Playwright trace, the changelog, the actual usage), not from a guess.',
-                'Merged end-to-end fixes went from about 20 a month to 60 in three weeks.',
+                'Merged end-to-end test PRs went from about 20 a month to 63 in October.',
                 'Every run leaves a retrospective that improves the next one.',
             ],
             tags: ['Claude Code', 'Agents', 'Automation'],
-        },
-        {
-            title: 'Shared tooling, then and now',
-            period: '2024–2026',
-            summary:
-                'One config library every micro-frontend could extend, later succeeded by the monorepo’s config packages.',
-            details: [
-                'Shared TypeScript, Vite, Vitest, ESLint and Playwright config, 11 versioned releases.',
-                'In the monorepo: ESLint, Prettier, TypeScript, Storybook and Stylelint packages, adopted by every app.',
-                'Automated dependency updates reviewed weekly so versions never drift apart again.',
-            ],
-            tags: ['Tooling', 'Standards'],
         },
         {
             title: 'Deterministic bank testing',
@@ -147,7 +137,7 @@ export const en: Cv = {
             title: 'Tech Lead, Platform Frontend',
             period: '2026–now',
             summary:
-                'A team of tech leads with shared ownership of the frontend baseline: the main app and a 29-app, 15-package monorepo.',
+                'Tripletex (Visma group) is a Norwegian cloud accounting platform used by 150,000+ businesses. A team of tech leads with shared ownership of the frontend baseline: the main app and a monorepo that has since grown to 29 apps and 15 packages.',
             details: [
                 'Dependencies and security updates, lint and type rules, and a stable, continuously deployed pipeline. No sprints.',
                 'Speed up the frontend part of the main app’s pipeline and remove frontend legacy.',
@@ -164,7 +154,7 @@ export const en: Cv = {
             details: [
                 'Added features to the PSD2 integration with ZTL, including moving automatic payments onto it.',
                 'Maintained and moved forward the file-based Autopay system.',
-                'Rebuilt bank reconciliation on the design system; customer satisfaction rose from 5.3 to 6.3 out of 7.',
+                'Rebuilt bank reconciliation on the design system.',
                 'Set up the banking micro-frontend from scratch: build, deploy, linting, Storybook, Playwright and error handling.',
                 'Made effort and impact explicit so product could decide on tech priorities.',
                 'Introduced AI in the team, with guardrails.',
@@ -192,14 +182,6 @@ export const en: Cv = {
             title: 'Front-End Developer',
             period: '2018–2019',
             summary: 'Drupal 8 theming for client websites.',
-            details: [],
-        },
-        {
-            company: 'E-Sign',
-            location: 'Ghent, Belgium',
-            title: 'Trainee',
-            period: '2018',
-            summary: 'Laravel; turning designs into code.',
             details: [],
         },
     ],

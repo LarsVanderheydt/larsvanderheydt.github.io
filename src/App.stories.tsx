@@ -23,7 +23,7 @@ export const Default: StoryObj<typeof App> = {
         ).toBeVisible();
 
         await userEvent.click(canvas.getByRole('button', { name: 'Nederlands' }));
-        await expect(canvas.getByRole('heading', { name: 'Geselecteerd werk' })).toBeVisible();
+        await expect(canvas.getByRole('heading', { name: 'Realisaties' })).toBeVisible();
         await expect(document.documentElement.lang).toBe('nl');
         await expect(new URLSearchParams(location.search).get('lang')).toBe('nl');
 
