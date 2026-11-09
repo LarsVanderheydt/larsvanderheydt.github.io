@@ -1,16 +1,18 @@
 import { useCv } from '../../i18n/CvContext';
 import { Disclosure } from '../Disclosure/Disclosure';
 import { Section } from '../Section/Section';
-import './WorkSection.css';
+import { Timeline } from '../Timeline/Timeline';
 
 export function WorkSection() {
     const cv = useCv();
 
     return (
         <Section id="work" title={cv.sections.work.title}>
-            <ul className="work-list">
-                {cv.work.map((w) => (
-                    <li key={w.title}>
+            <Timeline
+                entries={cv.work.map((w) => ({
+                    key: w.title,
+                    period: w.period,
+                    content: (
                         <Disclosure title={w.title} meta={w.period} summary={w.summary}>
                             <ul>
                                 {w.details.map((d) => (
@@ -23,9 +25,9 @@ export function WorkSection() {
                                 ))}
                             </ul>
                         </Disclosure>
-                    </li>
-                ))}
-            </ul>
+                    ),
+                }))}
+            />
         </Section>
     );
 }

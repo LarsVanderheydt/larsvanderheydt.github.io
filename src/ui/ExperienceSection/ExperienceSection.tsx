@@ -1,6 +1,7 @@
 import { useCv } from '../../i18n/CvContext';
 import { Disclosure } from '../Disclosure/Disclosure';
 import { Section } from '../Section/Section';
+import { Timeline } from '../Timeline/Timeline';
 import './ExperienceSection.css';
 
 export function ExperienceSection() {
@@ -8,13 +9,15 @@ export function ExperienceSection() {
 
     return (
         <Section id="experience" title={cv.sections.experience.title}>
-            <ol className="experience-list">
-                {cv.roles.map((r) => (
-                    <li key={r.title + r.period}>
+            <Timeline
+                entries={cv.roles.map((r) => ({
+                    key: r.title + r.period,
+                    period: r.period,
+                    content: (
                         <Disclosure
                             title={
                                 <>
-                                    {r.title} <span className="experience-list__company">· {r.company}</span>
+                                    {r.title} <span className="experience__company">· {r.company}</span>
                                 </>
                             }
                             meta={`${r.period} · ${r.location}`}
@@ -28,9 +31,9 @@ export function ExperienceSection() {
                                 </ul>
                             )}
                         </Disclosure>
-                    </li>
-                ))}
-            </ol>
+                    ),
+                }))}
+            />
         </Section>
     );
 }

@@ -1,0 +1,35 @@
+.timeline {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    inset-block: 0.5rem;
+    left: 0.4rem;
+    width: 2px;
+    background: var(--line);
+}
+
+.timeline__entry {
+    position: relative;
+}
+
+.timeline__entry::before {
+    content: '';
+    position: absolute;
+    top: 0.35rem;
+    left: -2rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    background: var(--bg);
+}
+
+.timeline__entry[data-ongoing]::before {
+    background: var(--accent);
+}

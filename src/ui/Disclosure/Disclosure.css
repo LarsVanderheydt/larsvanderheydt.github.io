@@ -1,19 +1,12 @@
-.disclosure {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--surface);
-}
-
+/* Static entries keep the toggle's gutter so periods line up down the timeline. */
 .disclosure__trigger {
     display: grid;
     gap: 0.35rem;
-    padding: 1.25rem 1.5rem;
+    padding-right: 2.5rem;
 }
 
 summary.disclosure__trigger {
     position: relative;
-    padding-right: 3.5rem;
-    border-radius: inherit;
     cursor: pointer;
     list-style: none;
 }
@@ -25,20 +18,16 @@ summary.disclosure__trigger::-webkit-details-marker {
 summary.disclosure__trigger::after {
     content: '+';
     position: absolute;
-    top: 1.1rem;
-    right: 1.5rem;
+    top: 0;
+    right: 0.25rem;
     color: var(--accent);
     font-size: 1.25rem;
-    line-height: 1;
+    line-height: 1.2;
     transition: rotate 0.2s;
 }
 
 .disclosure[open] > summary::after {
     rotate: 45deg;
-}
-
-summary.disclosure__trigger:hover {
-    background: color-mix(in srgb, var(--accent) 4%, transparent);
 }
 
 .disclosure__head {
@@ -50,24 +39,31 @@ summary.disclosure__trigger:hover {
 
 .disclosure__title {
     font-weight: 600;
+    font-size: 1.0625rem;
+    transition: color 0.15s;
+}
+
+summary.disclosure__trigger:hover .disclosure__title {
+    color: var(--accent);
 }
 
 .disclosure__meta {
     color: var(--muted);
     font-size: 0.8125rem;
     letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
 }
 
 .disclosure__summary {
+    max-width: 44rem;
     color: var(--muted);
 }
 
 .disclosure__body {
     display: grid;
     gap: 1rem;
-    margin: 0 1.5rem;
-    padding-block: 1rem 1.25rem;
-    border-top: 1px solid var(--line);
+    max-width: 44rem;
+    padding-top: 1rem;
 }
 
 .disclosure__body ul:not(.tags) {
