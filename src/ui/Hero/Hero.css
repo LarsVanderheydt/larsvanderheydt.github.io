@@ -32,7 +32,12 @@
 }
 
 .hero__eyebrow {
-    color: var(--muted);
+    /* The aurora drifts bright bands behind this small line; a halo in the page colour keeps it legible without a box. */
+    color: var(--text);
+    text-shadow:
+        0 0 2px var(--bg),
+        0 0 10px var(--bg),
+        0 0 20px var(--bg);
     font-size: 0.8125rem;
     letter-spacing: 0.04em;
 }
@@ -50,19 +55,29 @@
 
 .hero__focus {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     margin-top: 3.5rem;
+    counter-reset: focus;
 }
 
 .hero__focus li {
     display: grid;
-    gap: 0.25rem;
-    padding: 1.25rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: color-mix(in srgb, var(--surface) 70%, transparent);
-    backdrop-filter: blur(6px);
+    gap: 0.375rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    counter-increment: focus;
+}
+
+.hero__focus li::before {
+    content: counter(focus, decimal-leading-zero);
+    color: var(--accent);
+    font: 500 0.8125rem / 1 var(--font-sans);
+    letter-spacing: 0.08em;
+}
+
+.hero__focus strong {
+    font: 500 1.125rem / 1.3 var(--font-serif);
 }
 
 .hero__focus span {
