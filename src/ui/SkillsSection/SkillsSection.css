@@ -14,6 +14,7 @@
 }
 
 .skills dd {
+    grid-column: 2;
     color: var(--muted);
 }
 
@@ -21,5 +22,9 @@
     .skills > div {
         grid-template-columns: 1fr;
         gap: 0.5rem;
+    }
+
+    .skills dd {
+        grid-column: 1;
     }
 }

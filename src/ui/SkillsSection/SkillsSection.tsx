@@ -20,12 +20,12 @@ export function SkillsSection() {
                         </dd>
                     </div>
                 ))}
-                {cv.education.map((e) => (
-                    <div key={e.degree}>
-                        <dt>{cv.labels.education}</dt>
-                        <dd>{e.school ? `${e.degree}, ${e.school}` : e.degree}</dd>
-                    </div>
-                ))}
+                <div>
+                    <dt>{cv.labels.education}</dt>
+                    {cv.education.map((e) => (
+                        <dd key={e.degree}>{e.school ? `${e.degree}, ${e.school}` : e.degree}</dd>
+                    ))}
+                </div>
                 <div>
                     <dt>{cv.labels.languages}</dt>
                     <dd>{cv.languages.join(' · ')}</dd>
