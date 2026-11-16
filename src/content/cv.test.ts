@@ -41,6 +41,7 @@ const shape = (cv: Cv): unknown => ({
     skills: cv.skills.map((s) => s.items.length),
     education: cv.education.length,
     languages: cv.languages.length,
+    personal: cv.personal.length,
     links: cv.links,
     email: cv.email,
 });

@@ -21,11 +21,9 @@ export function SkillsSection() {
                     </div>
                 ))}
                 {cv.education.map((e) => (
-                    <div key={e.school}>
+                    <div key={e.degree}>
                         <dt>{cv.labels.education}</dt>
-                        <dd>
-                            {e.degree}, {e.school}
-                        </dd>
+                        <dd>{e.school ? `${e.degree}, ${e.school}` : e.degree}</dd>
                     </div>
                 ))}
                 <div>

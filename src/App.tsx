@@ -6,6 +6,7 @@ import { AiSection } from './ui/AiSection/AiSection';
 import { ExperienceSection } from './ui/ExperienceSection/ExperienceSection';
 import { Footer } from './ui/Footer/Footer';
 import { Hero } from './ui/Hero/Hero';
+import { PersonalSection } from './ui/PersonalSection/PersonalSection';
 import { LanguageToggle } from './ui/LanguageToggle/LanguageToggle';
 import { SideNav } from './ui/SideNav/SideNav';
 import { SkillsSection } from './ui/SkillsSection/SkillsSection';
@@ -39,6 +40,7 @@ export function App() {
                     <ExperienceSection />
                     <AiSection />
                     <SkillsSection />
+                    <PersonalSection />
                 </main>
             </div>
             <Footer />

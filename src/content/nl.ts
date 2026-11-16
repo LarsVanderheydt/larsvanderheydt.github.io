@@ -18,6 +18,7 @@ export const nl: Cv = {
         experience: { nav: 'Werkervaring', title: 'Werkervaring' },
         ai: { nav: 'AI', title: 'Hoe ik met AI werk' },
         skills: { nav: 'Vaardigheden', title: 'Vaardigheden' },
+        personal: { nav: 'Persoonlijk', title: 'Persoonlijk' },
     },
     name: 'Lars Vanderheydt',
     role: 'Frontend Platform Engineer',
@@ -209,6 +210,14 @@ export const nl: Cv = {
             degree: 'Professionele bachelor Digital Design & Development (Devine)',
             period: '2015–2018',
         },
+        {
+            degree: 'Secundair onderwijs Elektriciteit, met een specialisatiejaar groene energie (windturbines)',
+            period: '2015',
+        },
     ],
     languages: ['Nederlands (moedertaal)', 'Engels (vloeiend)', 'Noors (goede kennis)'],
+    personal: [
+        { label: 'Thuis', value: 'Opgegroeid in Oostende. Woont sinds 2022 in Oslo.' },
+        { label: 'Naast het werk', value: 'CrossFit en bordspellen.' },
+    ],
 };

@@ -18,6 +18,7 @@ export const en: Cv = {
         experience: { nav: 'Experience', title: 'Experience' },
         ai: { nav: 'AI', title: 'How I work with AI' },
         skills: { nav: 'Skills', title: 'Skills' },
+        personal: { nav: 'Personal', title: 'Personal' },
     },
     name: 'Lars Vanderheydt',
     role: 'Frontend Platform Engineer',
@@ -194,6 +195,16 @@ export const en: Cv = {
         { group: 'AI-assisted engineering', items: ['Claude Code', 'Agents & skills', 'Hooks', 'MCP'] },
         { group: 'Also', items: ['Java & Spring Boot', 'Docker'] },
     ],
-    education: [{ school: 'Howest', degree: 'Bachelor, Digital Design & Development (Devine)', period: '2015–2018' }],
+    education: [
+        { school: 'Howest', degree: 'Bachelor, Digital Design & Development (Devine)', period: '2015–2018' },
+        {
+            degree: 'Secondary school, Electricity, with a specialisation year in green energy (wind turbines)',
+            period: '2015',
+        },
+    ],
     languages: ['Dutch (native)', 'English (fluent)', 'Norwegian (working)'],
+    personal: [
+        { label: 'Home', value: 'Grew up in Ostend, Belgium. Living in Oslo since 2022.' },
+        { label: 'Outside work', value: 'CrossFit and board games.' },
+    ],
 };

@@ -19,7 +19,7 @@ export type Role = {
     details: string[];
 };
 
-export type SectionId = 'work' | 'ai' | 'experience' | 'skills';
+export type SectionId = 'work' | 'ai' | 'experience' | 'skills' | 'personal';
 
 export type Cv = {
     languageName: string;
@@ -47,8 +47,10 @@ export type Cv = {
     ai: { intro: string; practices: { title: string; body: string }[] };
     roles: Role[];
     skills: { group: string; items: string[] }[];
-    education: { school: string; degree: string; period: string }[];
+    // School is optional because a secondary school entry reads fine on its track alone.
+    education: { school?: string; degree: string; period: string }[];
     languages: string[];
+    personal: { label: string; value: string }[];
 };
 
 export const cvs: Record<Lang, Cv> = { en, nl };

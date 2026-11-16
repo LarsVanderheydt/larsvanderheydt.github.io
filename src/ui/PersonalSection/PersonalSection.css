@@ -1,0 +1,25 @@
+.personal {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.personal > div {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: 1rem;
+}
+
+.personal dt {
+    font-weight: 600;
+}
+
+.personal dd {
+    color: var(--muted);
+}
+
+@media (max-width: 56rem) {
+    .personal > div {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
