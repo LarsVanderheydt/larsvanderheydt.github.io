@@ -113,12 +113,13 @@ export const nl: Cv = {
         },
         {
             title: 'Lesgeven en aanwerven',
-            period: '2024–2025',
+            period: '2024–nu',
             summary:
                 'Een tweedaagse frontendcursus mee opgezet en gegeven voor developers van verschillende kantoren, en sollicitatiegesprekken gevoerd voor het platformteam.',
             details: [
                 'Tien onderwerpen: TypeScript, CSS, React, i18n, data ophalen, Storybook, Playwright, micro-frontends, toegankelijkheid en gedeelde utilities.',
                 'Technische interviews voor het frontend-platformteam, met één aanwerving als resultaat.',
+                'Sinds 2024 lid van de Frontend Council, de teamoverschrijdende groep die de frontendstandaarden bepaalt; ik leid mee de vergaderingen.',
             ],
             tags: ['Enablement', 'Mentoring'],
         },

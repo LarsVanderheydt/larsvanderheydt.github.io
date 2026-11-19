@@ -104,12 +104,13 @@ export const en: Cv = {
         },
         {
             title: 'Teaching and hiring',
-            period: '2024–2025',
+            period: '2024–now',
             summary:
                 'Co-created and ran a two-day frontend course for developers across offices, and interviewed for the platform team.',
             details: [
                 'Ten topics: TypeScript, CSS, React, i18n, data fetching, Storybook, Playwright, micro-frontends, accessibility and shared utilities.',
                 'Technical interviews for the frontend platform team, leading to one hire.',
+                'Member of the Frontend Council since 2024, the cross-team group that sets frontend standards; I co-facilitate its meetings.',
             ],
             tags: ['Enablement', 'Mentoring'],
         },
